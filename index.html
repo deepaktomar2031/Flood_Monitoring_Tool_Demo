@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <title>Flood Monitoring Tool Demo</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <script type="text/javascript" src="src/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="src/bootstrap.min.js"></script>
+  <script type="text/javascript" src="src/chart.min.js"></script>
+  <script type="text/javascript" src="src/app.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <a id="backToTopButton"></a>
+
+    <div>
+      <h1>Flood Monitoring Tool Demo</h1>
+    </div>
+
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="input-group input-group-sm">
+              <label>Select Station From the List : </label>
+              <select id="selectedOption" name="group_select">
+                <option value="0">None</option>
+              </select>
+            </div><br>
+          </div>
+
+          <div class="col-auto">
+            <div id="showLineGraph" class="col-auto">
+              <h6>Reading for last 24 HRS</h6>
+              <canvas id="lineGraph" width="800" height="600"></canvas>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="col-auto">
+              <table class="table table-sm table-bordered table-success">
+                <div id="stationListTable">ASSOCIATED TABLE</div>
+                <thead id="stationTableHeader">
+                  <tr>
+                    <th>Station</th>
+                    <th>X-Axis : Time</th>
+                    <th>Y-Axis: Reading</th>
+                  </tr>
+                </thead>
+                <tbody id="stationDetails">
+                  <tr>
+                    <td id="selectedStationCode"></td>
+                    <td id="time"></td>
+                    <td id="readingValue"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
