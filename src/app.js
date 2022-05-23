@@ -9,8 +9,8 @@ window.onload = () => {
 
 // GET CALL TO FETCH DATA FROM API END POINT, LIMITING TO 50 ONLY AS IT HAS TOO MUCH OF ITEMS IN RESPONSE
 function fetchStationList(data) {
-    const fetchStationListURL = 'http://environment.data.gov.uk/flood-monitoring/id/stations?_limit=50';
-    //   const fetchStationListURL = 'https://cors-anywhere.herokuapp.com/http://environment.data.gov.uk/flood-monitoring/id/stations?_limit=50';
+//     const fetchStationListURL = 'http://environment.data.gov.uk/flood-monitoring/id/stations?_limit=50';
+      const fetchStationListURL = 'https://cors-anywhere.herokuapp.com/http://environment.data.gov.uk/flood-monitoring/id/stations?_limit=50';
     $.ajax({
         type: 'GET',
         url: fetchStationListURL,
@@ -75,8 +75,8 @@ $(function () {
 
         const HrsInSeconds24 = 24 * 60 * 60 * 1000;
         const last24HRS = new Date(new Date().getTime() - HrsInSeconds24).toISOString();
-        const dataURL = 'http://environment.data.gov.uk/flood-monitoring/id/stations/' + value + '/readings?';
-        // const dataURL = 'https://cors-anywhere.herokuapp.com/http://environment.data.gov.uk/flood-monitoring/id/stations/'+value+'/readings?';
+//         const dataURL = 'http://environment.data.gov.uk/flood-monitoring/id/stations/' + value + '/readings?';
+        const dataURL = 'https://cors-anywhere.herokuapp.com/http://environment.data.gov.uk/flood-monitoring/id/stations/'+value+'/readings?';
         const param = 'since=' + last24HRS;
 
         if ((value == '0') || (value === 0) || (value == 'INVALID STATION')) {
